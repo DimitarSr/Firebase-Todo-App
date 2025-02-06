@@ -1,0 +1,14 @@
+#root {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas: 
+    "header"
+    "main";
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  font-family: 'Arial', sans-serif;
+} 
