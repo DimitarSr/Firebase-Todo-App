@@ -76,11 +76,11 @@ VITE_FIREBASE_DATABASE_URL=your_database_url
 ## 🛠 Installation & Setup
 1. **Clone the repository**
     ```sh
-    git clone https://github.com/your-username/to-do-app.git
+    git clone https://github.com/DimitarSr/Firebase-Todo-App.git
     ```
 2. **Go to the project folder**
     ```sh
-    cd To-Do-App
+    cd Firebase-Todo-App
     ```
 3. **Install dependencies**
     ```sh
