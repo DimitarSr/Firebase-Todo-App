@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { DatabaseProvider } from './contexts/DatabaseContext';
 import ProtectedRoute from './hoc/ProtectedRoute';
@@ -10,6 +16,7 @@ import { useContext } from 'react';
 import { AuthContext } from './contexts/AuthContext';
 import Todos from './views/Todos/Todos';
 import Home from './components/Home/Home';
+import InvalidPage from './components/InvalidPage/InvalidPage';
 
 function App() {
   return (
@@ -25,15 +32,17 @@ function App() {
 
 const MainRoutes = () => {
   const { user, loading } = useContext(AuthContext);
+  const location = useLocation();
 
   return (
     <>
-      {!loading && user && <Header />}
+      {!loading && user && location.pathname !== '/404' && <Header />}
 
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="*" element={<p>InvalidPage</p>} />
+        <Route path="/404" element={<InvalidPage />} />
+        <Route path="*" element={<Navigate to="/404" />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Navigate replace to={'/home'} />} />
