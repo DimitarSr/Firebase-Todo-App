@@ -103,3 +103,7 @@ VITE_FIREBASE_DATABASE_URL=your_database_url
 This is my first project using Firebase Authentication and Firebase Realtime Database. 🚀
 
 ⭐ If you like this project, don't forget to give it a star on GitHub! 🌟
+
+## ⚠️ Disclaimer
+This project was created for **educational purposes only**.  
+It is not intended for production use. The code is open-source and can be modified or improved for learning and personal projects.
